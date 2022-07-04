@@ -30,7 +30,7 @@ class EmployeFormType extends AbstractType
             ])
             ->add('entryAt', DateTimeType::class, [
                 'label' => "Date d'embauche",
-                'widget' => 'single_text',
+                'widget' => 'single_text'
                 
             ])
 
@@ -39,7 +39,7 @@ class EmployeFormType extends AbstractType
             ])
             ->add('submit', SubmitType::class, [
                 'label' => 'Valider',
-                'validate'=> false,
+                'validate'=> false
                 
             ])
         ;
@@ -49,6 +49,7 @@ class EmployeFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Employe::class,
+            
         ]);
     }
 }

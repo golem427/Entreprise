@@ -23,9 +23,10 @@
 
 			{# 2de façon d'afficher un formulaire Twig #}
 			{# Pour désactiver le validateur HTML coté-client (navigateur) on peut le faire 
-            dans EmployeFormType ('submit') OU dans le form_start en second argument comme suit: #}
-
-			{{ form_start(form_employe), {'attr': { novalidate: 'novalidate'}} }}
+            dans EmployeFormType ('submit') OU dans le form_start en second argument comme suit: 
+			{'attr': { novalidate:'novalidate'}} }
+			#}	
+			{{ form_start(form_employe) }}
 
 			{{ form_row(form_employe.firstname) }}
 			{{ form_row(form_employe.lastname) }}
@@ -44,8 +45,10 @@
 			{{ form_row(form_employe.gender) }}
 			
     		<div class="col-6">{{ form_row(form_employe.entryAt) }}</div>
-		{{ form_end(form_employe) }}
-			</div>
+			
+			{{ form_end(form_employe) }}
+
+		</div>
 </div>
 {% endblock %}
 
